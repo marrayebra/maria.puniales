@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Cortese";
+  src:
+    url("/fonts/Cortese-Regular.woff2") format("woff2"),
+    url("/fonts/Cortese-Regular.woff") format("woff"),
+    url("/fonts/Cortese-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #f5f5f5;
+  --muted: #a3a3a3;
+  --border: #262626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --font-display: "Cortese", Georgia, "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+@keyframes merch-backdrop-drift-a {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.035;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.085;
+  }
+}
+
+@keyframes merch-backdrop-drift-b {
+  0%,
+  100% {
+    transform: scale(1.06) rotate(0deg);
+    opacity: 0.025;
+  }
+  50% {
+    transform: scale(0.94) rotate(-2deg);
+    opacity: 0.065;
+  }
+}
+
+.merch-backdrop-layer {
+  opacity: 0.05;
+}
+
+.merch-backdrop-layer-a {
+  animation: merch-backdrop-drift-a 18s ease-in-out infinite;
+}
+
+.merch-backdrop-layer-b {
+  animation: merch-backdrop-drift-b 24s ease-in-out infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .merch-backdrop-layer-a,
+  .merch-backdrop-layer-b {
+    animation: none;
+    opacity: 0.04;
+    transform: scale(1);
+  }
+}

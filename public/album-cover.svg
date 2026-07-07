@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" fill="none">
+  <rect width="1200" height="1200" fill="#0a0a0a"/>
+  <rect x="80" y="80" width="1040" height="1040" stroke="#2a2a2a" stroke-width="1"/>
+  <path d="M600 420 L780 780 H420 Z" stroke="#3a3a3a" stroke-width="2" fill="none"/>
+  <text x="600" y="980" text-anchor="middle" fill="#525252" font-family="Arial, sans-serif" font-size="28" letter-spacing="12">UNTITLED</text>
+</svg>
