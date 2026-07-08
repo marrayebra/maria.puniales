@@ -1,18 +1,13 @@
 import { album } from "@/content/album";
 
-function publicPath(...segments: string[]) {
-  return `/${segments.map((segment) => encodeURIComponent(segment)).join("/")}`;
-}
-
-const espaldaLogo = publicPath("logo", "Espalda MPÑS .png");
-
 export const site = {
   name: "María Puñales",
   wordmark: "MPÑS",
   tagline: "Nuevo álbum",
   logo: {
-    mark: espaldaLogo,
-    fullWordmark: publicPath("logo", "mariapuñales.png"),
+    mark: "/logo/espalda-mpns.png",
+    fullWordmark: "/logo/mariapunales-wordmark.png",
+    favicon: "/logo/mpns.png",
   },
   social: {
     instagram: "https://www.instagram.com/maria.puniales/",

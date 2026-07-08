@@ -8,7 +8,7 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 bg-black/40 px-4 py-3 backdrop-blur-sm sm:px-6 md:px-10 md:py-4">
       <Link
         href="/"
-        className="relative block h-10 w-[4.5rem] shrink-0 transition-opacity hover:opacity-80 sm:h-11 sm:w-20"
+        className="relative block h-11 w-24 shrink-0 transition-opacity hover:opacity-80 sm:h-12 sm:w-28"
         aria-label={site.name}
       >
         <Image
@@ -16,7 +16,7 @@ export function SiteHeader() {
           alt=""
           fill
           className="object-contain object-left"
-          sizes="80px"
+          sizes="112px"
           priority
         />
       </Link>

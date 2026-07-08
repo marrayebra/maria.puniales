@@ -65,7 +65,7 @@ export default function Home() {
 
           <Link
             href={album.listenUrl}
-            className="border border-white/30 px-8 py-3 text-xs font-medium uppercase tracking-[0.35em] text-white transition-colors hover:border-white hover:bg-white hover:text-black"
+            className="border border-white/30 px-8 py-3 text-xs font-medium uppercase tracking-[0.35em] text-white shadow-[0_0_40px_rgba(255,255,255,0.06)] transition-colors hover:border-white hover:bg-white hover:text-black"
           >
             Escuchar
           </Link>

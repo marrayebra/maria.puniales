@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Sitio oficial de María Puñales. Trío de rock de Montevideo, Uruguay.",
   icons: {
-    icon: site.logo.fullWordmark,
+    icon: site.logo.favicon,
   },
 };
 

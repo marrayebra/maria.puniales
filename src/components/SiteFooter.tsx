@@ -1,12 +1,25 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 bg-black px-4 py-10 sm:px-6 md:px-10">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-        <p className="font-display text-sm tracking-[0.3em] text-white/80">
-          {site.wordmark}
-        </p>
+    <footer className="relative z-10 border-t border-white/10 bg-black px-4 py-10 sm:px-6 md:px-10">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+        <Link
+          href="/"
+          className="relative block h-9 w-20 transition-opacity hover:opacity-80"
+          aria-label={site.name}
+        >
+          <Image
+            src={site.logo.mark}
+            alt=""
+            fill
+            className="object-contain object-left"
+            sizes="80px"
+          />
+        </Link>
 
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 sm:justify-end">
           <a
