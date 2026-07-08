@@ -9,14 +9,15 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
         <Link
           href="/"
-          className="relative block h-9 w-20 transition-opacity hover:opacity-80"
+          className="relative flex h-10 items-center transition-opacity hover:opacity-80"
           aria-label={site.name}
         >
           <Image
             src={site.logo.mark}
-            alt=""
-            fill
-            className="object-contain object-left"
+            alt={site.name}
+            width={482}
+            height={200}
+            className="h-9 w-auto object-contain mix-blend-screen sm:h-10"
             sizes="80px"
           />
         </Link>

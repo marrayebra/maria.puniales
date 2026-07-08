@@ -5,8 +5,9 @@ export const site = {
   wordmark: "MPÑS",
   tagline: "Nuevo álbum",
   logo: {
-    mark: "/logo/espalda-mpns.png",
+    mark: "/logo/mpns.png",
     fullWordmark: "/logo/mariapunales-wordmark.png",
+    shirtBack: "/logo/espalda-mpns.png",
     favicon: "/logo/mpns.png",
   },
   social: {

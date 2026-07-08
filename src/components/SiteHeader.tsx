@@ -8,14 +8,15 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 bg-black/40 px-4 py-3 backdrop-blur-sm sm:px-6 md:px-10 md:py-4">
       <Link
         href="/"
-        className="relative block h-11 w-24 shrink-0 transition-opacity hover:opacity-80 sm:h-12 sm:w-28"
+        className="relative flex h-11 items-center shrink-0 transition-opacity hover:opacity-80 sm:h-12"
         aria-label={site.name}
       >
         <Image
           src={site.logo.mark}
-          alt=""
-          fill
-          className="object-contain object-left"
+          alt={site.name}
+          width={482}
+          height={200}
+          className="h-full w-auto object-contain object-left mix-blend-screen"
           sizes="112px"
           priority
         />
