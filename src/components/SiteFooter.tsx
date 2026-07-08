@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { site } from "@/lib/site";
@@ -9,17 +8,9 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
         <Link
           href="/"
-          className="relative flex h-10 items-center transition-opacity hover:opacity-80"
-          aria-label={site.name}
+          className="font-display text-sm tracking-[0.35em] text-white/80 transition-opacity hover:text-white"
         >
-          <Image
-            src={site.logo.mark}
-            alt={site.name}
-            width={482}
-            height={200}
-            className="h-9 w-auto object-contain mix-blend-screen sm:h-10"
-            sizes="80px"
-          />
+          {site.wordmark}
         </Link>
 
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 sm:justify-end">

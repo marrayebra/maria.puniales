@@ -11,7 +11,7 @@ export function MerchBackdrop() {
       <div className="absolute left-1/2 top-[40%] h-[min(140vw,900px)] w-[min(140vw,900px)] -translate-x-1/2 -translate-y-1/2">
         <div className="merch-backdrop-layer merch-backdrop-layer-a relative h-full w-full">
           <Image
-            src={site.logo.shirtBack}
+            src={site.logo.mark}
             alt=""
             fill
             className="object-contain"
@@ -23,7 +23,7 @@ export function MerchBackdrop() {
       <div className="absolute left-1/2 top-[62%] h-[min(115vw,720px)] w-[min(115vw,720px)] -translate-x-1/2 -translate-y-1/2">
         <div className="merch-backdrop-layer merch-backdrop-layer-b relative h-full w-full">
           <Image
-            src={site.logo.shirtBack}
+            src={site.logo.mark}
             alt=""
             fill
             className="object-contain"
