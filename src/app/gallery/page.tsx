@@ -7,8 +7,8 @@ export const metadata = {
   title: "Galería",
 };
 
-export default function GalleryPage() {
-  const sets = getGallerySets();
+export default async function GalleryPage() {
+  const sets = await getGallerySets();
 
   return (
     <div className="min-h-screen bg-background">
@@ -20,7 +20,7 @@ export default function GalleryPage() {
             Galería
           </h1>
           <p className="mt-3 text-sm tracking-[0.15em] text-muted">
-            Fotos de shows, ensayos y sesiones.
+            Fotos de shows en vivo.
           </p>
         </div>
 

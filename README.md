@@ -1,30 +1,49 @@
 # maria.puniales
 
-Official website for María Puniales — minimal rock band site built with Next.js.
+Sitio oficial de María Puñales — Next.js + Sanity (galería).
 
 ## Stack
 
 - [Next.js](https://nextjs.org) (App Router)
+- [Sanity](https://www.sanity.io) — fotos de shows en vivo
 - [Tailwind CSS](https://tailwindcss.com)
-- Deployed on [Vercel](https://vercel.com)
+- Deploy: [Vercel](https://vercel.com)
 
 ## Getting started
 
 ```bash
-pnpm install
-pnpm dev
+cp .env.example .env.local   # rellenar tokens si hace falta
+npm install
+npm run dev                  # sitio → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Studio (CMS) en otra terminal:
 
-## Site content
+```bash
+npm run studio               # → http://localhost:3333
+```
 
-Hardcoded for now in `src/lib/site.ts`. Replace `public/album-cover.svg` with your real album artwork when ready.
+## Contenido
+
+| Qué | Dónde |
+| --- | --- |
+| Album, lyrics, links | `src/content/album.ts` (hardcoded) |
+| Merch (remeras / CD) | `src/content/merch.ts` + `public/merch/` |
+| Fotos de shows | Sanity → tipo **Show (Galería)** |
+
+### Importar shows desde `public/gallery/`
+
+```bash
+npm run import:gallery
+```
+
+Sube cada carpeta de show a Sanity (idempotente por `sourceFolder`). Después podés borrar las fotos del repo.
 
 ## Pages
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Landing — latest album hero |
-| `/music` | Album credits, lyrics, streaming links |
-| `/gallery` | Gig photos |
+| `/` | Landing — album hero |
+| `/music` | Créditos, letras, streaming |
+| `/gallery` | Shows (Sanity) |
+| `/merch` | Remeras y CD |

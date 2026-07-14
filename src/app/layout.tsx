@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { site } from "@/lib/site";
-
 import { WelcomePopup } from "@/components/WelcomePopup";
+import { site } from "@/lib/site";
+import { SanityLive } from "@/sanity/live";
 
 import "./globals.css";
 
@@ -34,6 +34,7 @@ export default function RootLayout({
       <body className="min-h-full bg-background text-foreground">
         {children}
         <WelcomePopup />
+        <SanityLive />
       </body>
     </html>
   );

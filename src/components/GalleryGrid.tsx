@@ -30,7 +30,7 @@ function GalleryPhotos({
             className="group relative aspect-[4/3] overflow-hidden bg-zinc-900"
           >
             <Image
-              src={photo}
+              src={set.thumbs[index] ?? photo}
               alt={`${set.title} ${index + 1}`}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -53,7 +53,7 @@ function GalleryPhotos({
             className="group relative aspect-[4/3] w-[72vw] shrink-0 snap-start overflow-hidden bg-zinc-900 sm:w-[42vw] md:w-[28vw] lg:w-[22vw]"
           >
             <Image
-              src={photo}
+              src={set.thumbs[index] ?? photo}
               alt={`${set.title} ${index + 1}`}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
